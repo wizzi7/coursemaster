@@ -1,0 +1,6 @@
+<div [formGroup]="form">
+    <mat-form-field appearance="outline" style="width: 100%">
+        <mat-label>{{label}}</mat-label>
+        <input matInput [formControlName]="field" [placeholder]="placeholder" [name]="fieldId" [attr.type]="isPassword ? 'password' : 'text'">
+    </mat-form-field>
+</div>

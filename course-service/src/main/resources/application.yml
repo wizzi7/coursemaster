@@ -1,0 +1,76 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: course-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 50
+      minimum-idle: 10
+      schema: coursemaster
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: coursemaster
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+application:
+  security:
+    jwt:
+      secret-key: e4ff55d92fbedf3c7791d27c9779bd5bfe8811df3efcae903467dbb558c8f056
+
+app:
+  security:
+    cors:
+      allowedOrigins: http://localhost:4200, http://localhost:8080, http://localhost:8081
+      allowedMethods: GET, POST, PUT, DELETE, HEAD, PATCH, OPTIONS
+      allowedHeaders: Origin, Authorization, Content-Type, Accept
+      allowCredentials: true
+      maxAge: 3600
+
+feign:
+  url:
+    auth-service: http://localhost:8080
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 50
+      minimum-idle: 10
+      schema: testy
+
+  jpa:
+    properties:
+      hibernate:
+        database: postgres
+        default_schema: testy
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+    database: postgresql
+    show-sql: true

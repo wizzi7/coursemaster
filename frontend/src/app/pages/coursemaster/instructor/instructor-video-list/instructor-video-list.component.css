@@ -1,0 +1,81 @@
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 55px 0 0 0;
+    position: relative;
+    min-height: 80vh
+}
+
+td.mat-column-thumbnail {
+    width: 250px;
+    max-height: 250px;
+}
+
+td.mat-column-description {
+    max-width: 250px;
+}
+
+img {
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 3px;
+}
+
+.mat-header-cell {
+    padding-left: 30px;
+}
+
+.mat-cell {
+    padding-left: 30px;
+}
+
+.img-container {
+    border: 2px solid rgb(203,203,203);
+    border-radius: 5px;
+}
+
+table.mat-table {
+    width: 100%;
+}
+
+td.mat-column-options {
+    width: 20px;
+    padding-right: 8px;
+}
+
+.shadow {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.87),
+    5px 0 15px rgba(0, 0, 0, 0.87),
+    -5px 0 15px rgba(0, 0, 0, 0.87);
+}
+
+.column-left {
+    float: left;
+    width: 50%;
+    align-items: center;
+}
+
+.column-right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.save-button {
+    background-color: #4eabfc;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 24%;
+    margin-bottom: 0;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.save-button:hover {
+    color: rgb(231, 231, 231);
+}

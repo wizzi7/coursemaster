@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 50
+      minimum-idle: 10
+      schema: coursemaster
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: coursemaster
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: e4ff55d92fbedf3c7791d27c9779bd5bfe8811df3efcae903467dbb558c8f056
+      expiration: 21600000 # 6 hrs
+      refresh_token:
+        expiration: 86400000 # 1 day
+
+app:
+  security:
+    cors:
+      allowedOrigins: http://localhost:4200, http://localhost:8080, http://localhost:8081
+      allowedMethods: GET, POST, PUT, DELETE, HEAD, PATCH, OPTIONS
+      allowedHeaders: Origin, Authorization, Content-Type, Accept
+      allowCredentials: true
+      maxAge: 3600

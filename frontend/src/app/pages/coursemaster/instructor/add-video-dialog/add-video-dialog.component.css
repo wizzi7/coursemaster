@@ -1,0 +1,149 @@
+.container {
+    max-width: 800px;
+    margin: 0;
+    padding: 0 40px 40px 0;
+}
+
+.row {
+    height: 60px;
+    width: 800px;
+    overflow: auto;
+}
+.column-left {
+    float: left;
+    width: 50%;
+    align-items: center;
+}
+
+.column-right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+mat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.row:after {
+    display: table;
+    clear: both;
+}
+
+.content {
+    height: 500px;
+    width: 800px;
+}
+
+h1 {
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.content-row {
+    height: 100%;
+    clear: both;
+}
+
+.column {
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.upload-icon {
+    margin-top: 50px;
+    font-size: 200px;
+    width: 200px;
+    height: 200px;
+    color: rgb(170, 170, 170);
+}
+
+.select-button {
+    background-color: #008cff;
+    border: none;
+    color: white;
+    padding: 13px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    width: 23%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.span-text {
+    font-size: 21px;
+}
+
+.column-l {
+    width: 50%;
+}
+
+.upload-image-div {
+    width: 150px;
+    height: 150px;
+    border: 1px dashed rgb(203,203,203);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: rgb(159, 158, 158);
+    cursor: pointer;
+}
+
+.upload-image-div-with-content {
+    border: 1px dashed rgb(203,203,203);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0;
+}
+
+.upload-image-icon {
+    font-size: 90px;
+    width: 100px;
+    height: 100px;
+    padding-top: 15px;
+    z-index: -10;
+}
+
+.save-button {
+    background-color: #008cff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 12%;
+    margin-bottom: 0;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.cancel-button {
+    background-color: white;
+    border: none;
+    color: rgb(159, 158, 158);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 12%;
+    margin-bottom: 0;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+img {
+    max-height: 220px;
+    max-width: 320px;
+    border-radius: 5px;
+    padding: 0;
+}

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Newest videos</h1>
+  <hr>
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let video of this.dataSourceVideos">
+      <video-tile [video]="video"></video-tile>
+    </div>
+  </div>
+</div>

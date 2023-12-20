@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="login-container">
+    <form [formGroup]="formGroup">
+      <div *ngIf="formGroup" class="row">
+        <div class="col">
+          <h2 style="margin-bottom: 20px">Log in to your account</h2>
+          <div *ngIf="this.loginFailed" class="login-error"><mat-icon style="color: red; margin-bottom: 10px; margin-top: 2%">error</mat-icon>&nbsp;Invalid email or password.</div>
+          <mat-form-input [label]="'Email'" [whenDirty]="isDirty" [form]="formGroup" field="email">
+
+          </mat-form-input>
+          <mat-form-input [label]="'Password'" [form]="formGroup" field="password" [isPassword]="true">
+
+          </mat-form-input>
+          <button class="custom-button" mat-button (click)="loginButtonClicked()">Log in</button>
+          <hr/>
+          <span>Don't have an account? <span class="custom-href" routerLink="/register"><b><u>Sign up</u></b></span></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

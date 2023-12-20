@@ -1,0 +1,14 @@
+<div class="" *ngIf="video">
+  <div class="column">
+    <img src="{{video?.thumbnailBase64Data}}" alt="" (click)="onImageClick()">
+  </div>
+  <div class="column-title">
+    <span style="font-size: 15px; font-weight: bold">{{video.title}}</span>
+  </div>
+  <div class="column-author">
+    <span style="font-size: 14px; color: #a9a9a9">{{video.creatorFullName}}</span>
+  </div>
+  <div class="column-author">
+    <span style="font-size: 14px; color: #a9a9a9">Added: {{video.uploadDate | date : 'dd.MM.yyyy HH:mm'}}</span>
+  </div>
+</div>

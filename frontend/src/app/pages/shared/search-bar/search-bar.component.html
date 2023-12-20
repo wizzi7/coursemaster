@@ -1,0 +1,9 @@
+<div class="box">
+  <div class="search-box" [formGroup]="form">
+    <input type="text" formControlName="searchInput" placeholder="Search..." (keydown.enter)="onSearchClick()">
+    <label class="icon" (click)="onSearchClick()">
+      <div class="vertical-hr"></div>
+      <mat-icon>search</mat-icon>
+    </label>
+  </div>
+</div>

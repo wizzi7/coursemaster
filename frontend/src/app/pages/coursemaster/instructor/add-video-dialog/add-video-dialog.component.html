@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="column-left">
+      <h1 *ngIf="uploadView">Upload videos</h1>
+      <h1 *ngIf="!uploadView">Video</h1>
+    </div>
+    <div class="column-right">
+      <mat-icon (click)="closeDialog()">close</mat-icon>
+    </div>
+  </div>
+  <div class="content">
+
+    <div class="content-row" *ngIf="uploadView">
+      <div class="column">
+        <mat-icon class="upload-icon">cloud_upload</mat-icon>
+      </div>
+      <div class="column" style="padding: 0;">
+        <span class="span-text">Drag and drop the video files you want to upload</span>
+      </div>
+      <div class="column">
+        <button class="select-button" (click)="inputFileClicked()">
+          <input #inputFile type="file" (change)="onVideoSelected($event)" style="display: none">
+          Select file
+        </button>
+      </div>
+    </div>
+
+    <div class="content-row" *ngIf="!uploadView">
+      <hr>
+      <div class="column-l">
+        <span style="font-size: 20px; padding-bottom: 16px; display: block">Details</span>
+        <mat-form-input [label]="'Title'" [form]="formGroup" field="title" [placeholder]="'Add a title describing your video'"></mat-form-input>
+        <mat-form-textarea [label]="'Description'" [form]="formGroup" field="description" [placeholder]="'Describe your video'"></mat-form-textarea>
+        <span style="font-size: 20px; padding-bottom: 16px; display: block">Thumbnail</span>
+      </div>
+      <div>
+        <div class="upload-image-div row" style="margin: 0;padding-bottom: 15px" *ngIf="!uploadedThumbnail" (click)="inputThumbnailClicked()">
+          <div class="column" style="padding-top: 0">
+            <a>
+              <mat-icon class="upload-image-icon">add_photo_alternate</mat-icon>
+              <input #inputThumbnail type="file" (change)="onThumbnailSelected($event)" style="display: none">
+            </a>
+          </div>
+
+          <div class="column" style="padding: 0; margin: 0;color: rgb(159, 158, 158);">Upload thumbnail</div>
+        </div>
+        <div [ngClass]="{'upload-image-div row': !uploadedThumbnail, 'upload-image-div-with-content' : uploadedThumbnail}"  *ngIf="uploadedThumbnail">
+          <img src="{{thumbnailBase64Data}}" alt="">
+        </div>
+      </div>
+      <div style="text-align: right; width: 100%">
+        <button class="cancel-button" (click)="cancelClicked()">Cancel</button>
+        <button class="save-button" (click)="saveClicked()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

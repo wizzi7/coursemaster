@@ -1,0 +1,25 @@
+img {
+    max-width: 290px;
+    border-radius: 20px;
+    transition: opacity 0.2s;
+}
+
+.column-title {
+    width: 100%;
+    max-width: 290px;
+    padding: 10px 5px 5px 10px;
+    white-space: normal;
+    overflow-wrap: break-word
+}
+
+.column-author {
+    width: 100%;
+    max-width: 290px;
+    padding: 0 5px 5px 10px;
+}
+
+img:hover {
+    color: rgb(231, 231, 231);
+    cursor: pointer;
+    opacity: 0.8;
+}

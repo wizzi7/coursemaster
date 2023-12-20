@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="column-left">
+      <video *ngIf="this.videoSrc" controls preload="auto" poster="{{video?.thumbnailBase64Data}}">
+        <source [src]="this.videoSrc" type="video/mp4">
+      </video>
+      <div class="column-title">
+        <span>{{video?.title}}</span>
+      </div>
+      <div class="column-author">
+        <span>{{video?.creatorFullName}}</span>
+      </div>
+      <div class="column-upload-date">
+        <span>Added: {{video?.uploadDate | date : 'dd.MM.yyyy HH:mm'}}</span>
+      </div>
+      <div class="column-description">
+        <span>{{video?.description}}</span>
+      </div>
+    </div>
+    <div class="column-right">
+
+    </div>
+  </div>
+</div>

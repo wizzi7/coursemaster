@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="login-container">
+    <form [formGroup]="formGroup">
+      <div *ngIf="formGroup" class="row">
+        <div class="col">
+          <h2 style="margin-bottom: 10px">Create new account</h2>
+          <mat-form-input *ngIf="formGroup" [label]="'Firstname'" [whenDirty]="isDirty" [form]="formGroup"
+                          field="firstname" fieldId="registerFirstname"></mat-form-input>
+          <mat-form-input *ngIf="formGroup" [label]="'Lastname'" [whenDirty]="isDirty" [form]="formGroup"
+                          field="lastname" fieldId="registerLastname"></mat-form-input>
+          <mat-form-input *ngIf="formGroup" [label]="'Email'" [whenDirty]="isDirty" [form]="formGroup" field="email"
+                          fieldId="registerEmail"></mat-form-input>
+          <mat-form-input *ngIf="formGroup" [label]="'Password'" [whenDirty]="isDirty" [form]="formGroup"
+                          field="password" fieldId="registerPassword"></mat-form-input>
+
+          <material-select [items]="roles" selected="selectedRoleOption" label="Role" (elementClick)="roleClick($event)" [required]="true"></material-select>
+
+          <button mat-button class="custom-button" (click)="registerButtonClicked()">Sign up</button>
+          <hr/>
+          <span>Already have an account? <span class="custom-href" routerLink="/login"><b><u>Log in</u></b></span></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

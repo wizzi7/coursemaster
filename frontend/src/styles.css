@@ -1,0 +1,23 @@
+html, body { min-height: 100vh; }
+body {
+    margin: 0;
+    font-family: "Lexend", sans-serif;
+    font-size: 42px;
+}
+
+.l-page-row {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row-centered {
+    text-align: center;
+}
+.l-row {
+    max-width: 1220px
+}
+
+.u-spacing-top-l {
+    margin-top: 20px;
+}

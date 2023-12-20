@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="outer-navbar-container">
+    <div class="navbar-container">
+      <mat-toolbar style="background-color: #4eabfc;" class="navbar mat-toolbar-row" headerMenu>
+        <div style="color: white; font-size: 26px">
+          <button (click)="navigateToHomePage()" class="main-button">Course Master</button>
+        </div>
+        <div class="search-bar" [ngStyle]="{'display': this.searchBarVisible ? 'block' : 'none'}">
+          <search-bar></search-bar>
+        </div>
+        <div>
+          <button *ngIf="!this.loggedIn" routerLink="/login" class="navbar-button">Log in</button>
+          <button *ngIf="!this.loggedIn" routerLink="/register" class="navbar-button">Sign up</button>
+          <mat-icon *ngIf="this.loggedIn" [matMenuTriggerFor]="menu">menu</mat-icon>
+          <mat-menu #menu="matMenu" class="custom-mat-menu">
+            <button *ngIf="isInstructor"  mat-menu-item routerLink="/instructor">Instructor dashboard</button>
+            <button mat-menu-item (click)="logoutClicked()">Log out</button>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+
+  <mat-sidenav-container>
+    <mat-sidenav-content>
+      <div role="main">
+        <div class="u-padding-top-l"></div>
+        <div class="l-page-row">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="u-padding-top-xl"></div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
