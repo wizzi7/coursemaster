@@ -23,6 +23,24 @@ The backend is split into independent **microservices** communicating through an
 
 ---
 
+## 🛠️ Technology Stack
+
+| Layer | Technology |
+|---|---|
+| **Language** | Java 17, TypeScript |
+| **Backend Framework** | Spring Boot 3.x |
+| **Gateway** | Spring Cloud Gateway |
+| **Security** | Spring Security, OAuth2, JWT |
+| **Persistence** | Spring Data JPA, PostgreSQL |
+| **Inter-service Comm.** | OpenFeign |
+| **API Docs** | Springdoc OpenAPI (Swagger UI) |
+| **Frontend** | Angular 14, Angular Material, Bootstrap 5 |
+| **Reactive** | RxJS |
+| **Build** | Maven, npm |
+| **Containerization** | Docker |
+
+---
+
 ## 🖼️ Screenshots
 
 **Upload video**
@@ -88,23 +106,5 @@ The backend is split into independent **microservices** communicating through an
         │   PostgreSQL     │
         └──────────────────┘
 ```
-
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technology |
-|---|---|
-| **Language** | Java 17, TypeScript |
-| **Backend Framework** | Spring Boot 3.x |
-| **Gateway** | Spring Cloud Gateway |
-| **Security** | Spring Security, OAuth2, JWT |
-| **Persistence** | Spring Data JPA, PostgreSQL |
-| **Inter-service Comm.** | OpenFeign |
-| **API Docs** | Springdoc OpenAPI (Swagger UI) |
-| **Frontend** | Angular 14, Angular Material, Bootstrap 5 |
-| **Reactive** | RxJS |
-| **Build** | Maven, npm |
-| **Containerization** | Docker |
 
  
