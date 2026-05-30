@@ -91,7 +91,7 @@ The backend is split into independent **microservices** communicating through an
 │            (single entry point)         │
 └────────────┬────────────────────────────┘
              │                  │
-    /auth/**  │                  │  /courses/**
+    /auth/** │                  │  /courses/**
              ▼                  ▼
 ┌────────────────┐    ┌──────────────────┐
 │  Auth Service  │    │  Course Service  │
